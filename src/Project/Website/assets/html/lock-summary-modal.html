@@ -1,0 +1,296 @@
+﻿<html>
+
+<head>
+
+
+    <!-- Remove base tag before putting into Sitecore -->
+    <base href="https://isaca-nc-prod-cm.azurewebsites.net" />
+
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,400italic,600italic,700italic,300,600,700,800" rel="stylesheet">
+
+    <link href="/sitecore/shell/themes/standard/default/Default.css" rel="stylesheet">
+
+    <link href="/sitecore/shell/controls/Lib/Flexie/flex.css" rel="stylesheet">
+
+    <link href="/sitecore/shell/themes/standard/default/Dialogs.css" rel="stylesheet">
+
+    <style>
+        #LockSummary {
+            margin: 15px;
+            height: auto !important;
+        }
+
+        #LockSummary .scListControl > tbody > tr.context-row:hover {
+            background: #fff;
+        }
+
+        #LockSummary .scListControl > thead th, .scListControl > tbody > tr > td {
+            text-align: center;
+            position: relative;
+        }
+
+        #LockSummary .scListControl > thead th, .scListControl > tbody > tr > td.scListControlHead {
+            text-align: left;
+        }
+
+        #LockSummary td input[type="radio"] {
+            margin: 15px auto 20px;
+        }
+
+        #LockSummary td label {
+            margin: 10px auto 0;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+            right: 0;
+            top: 0;
+        }
+
+        #LockSummary td label span {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+        }
+
+        #LockSummary td textarea {
+            min-height: 150px;
+        }
+
+        #LockSummary td ul {
+            text-align: left;
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        #LockSummary td ul li {
+            margin-bottom: 10px;
+        }
+
+        #LockSummary td ul li a {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        #LockSummary td ul li a:hover {
+            text-decoration: none;
+        }
+
+        .scValidatorResult {
+            white-space: normal !important;
+        }
+    </style>
+    <script type="text/javascript">
+        //<![CDATA[
+        var __jsnlog_configure = function(JL) {
+            JL.setOptions({
+                "requestId": "ezevlhwpxjqjnlpyg1f0n3sx-097406cc03444f0b8bede60b1b2026fb",
+                "defaultAjaxUrl": "/jsnlog.logger",
+                "enabled": true,
+                "maxMessages": 20
+            });
+            var a0 = JL.createAjaxAppender('ajaxAppender');
+            a0.setOptions({
+                "level": 5000,
+                "batchSize": 10,
+                "sendWithBufferLevel": 5000,
+                "storeInBufferLevel": 2000,
+                "bufferSize": 20
+            });
+            var a1 = JL.createConsoleAppender('c		onsoleAppender');
+            a1.setOptions({});
+            var logger = JL("");
+            logger.setOptions({
+                "appenders": [a0, a1]
+            });
+            setInterval(function() {
+                JL('').appenders.forEach(function(appender) {
+                    appender.sendBatch();
+                });
+            }, 1000);
+        };
+        try {
+            __jsnlog_configure(JL);
+        } catch (e) {};
+        //]]>
+    </script>
+    <script type="text/javascript" src="/sitecore/shell/controls/lib/jsnlog/jsnlog.min.js"></script>
+    <script src="/sitecore/shell/controls/lib/prototype/prototype.js" type="text/javascript"></script>
+    <script src="/sitecore/shell/controls/Browser.js" type="text/javascript"></script>
+    <script src="/sitecore/shell/controls/Sitecore.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        Event.observe(window, "load", function() {
+            if (window.scForm) {
+                window.scForm.registerLaunchpadClick();
+            }
+        });
+    </script>
+    <script type="">
+
+        document.observe("keydown", function(event) { if (event.keyCode == 13) { var ctl = event.target; if (ctl != null) { if (ctl.tagName == "INPUT") { if (ctl.onsubmit){ if(ctl.onsubmit.toString().indexOf("return false;") >= 0) { return; } } } } var ok = $("OK"); if (ok != null) { ok.click(); } } if (event.keyCode == 27) { var ok = $("Cancel"); if (ok != null) { ok.click(); } } });
+
+    </script>
+    <script type="text/JavaScript" language="javascript">
+        if (!window.scSitecore){ scSitecore = function(){}; } scSitecore.prototype.Settings = {}; scSitecore.prototype.Settings.SessionTimeout = 1200000; scSitecore.prototype.Settings.Icons = {}; scSitecore.prototype.Settings.Icons.CacheFolder = '/temp/IconCache';
+    </script>
+    <title>
+        Sitecore
+    </title>
+    <meta name="GENERATOR" content="Sitecore">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="imagetoolbar" content="false">
+    <style>
+        body.ie {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body id="ctl00_ctl00_ctl00_ctl00_ctl05_PageBody" style="margin:0px;width:100%;height:100%;overflow: hidden;" class="ff wk wk72 lang_en">
+    <form method="post" action="/sitecore/shell/-/xaml/Sitecore.Shell.Applications.ContentEditor.Dialogs.ValidationResult.aspx?hdl=677474D77917457A955379274F873250" id="ctl02">
+        <div class="aspNetHidden">
+            <input type="hidden" name="__CSRFTOKEN" id="__CSRFTOKEN" value="/wEFJDUwMDE4NDRhLTczNzEtNDlmYi05ODRlLTZhMDYwOWExMGMxOA==">
+            <input type="hidden" name="__PAGESTATE" id="__PAGESTATE" value="5BBD39D6E73D4026B2388D646534A92F">
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="">
+        </div>
+        <div class="scFlexColumnContainer scStretch">
+            <div class="scDialogHeader">
+                <div class="DialogHeader"><span id="HeaderLiteral">Lock Summary</span></div>
+                <div class="DialogHeaderDescription"><span id="TextLiteral">Please review and approve the below field updates before unlocking.</span></div>
+            </div>
+            <div class="scFlexContent">
+                <div class="scStretchAbsolute scDialogContentContainer">
+                    <div id="LockSummary" class="scScrollbox scStretchAbsolute">
+                        <table class="scListControl" width="100%" cellpadding="0" border="0">
+                            <colgroup>
+                                <col valign="top">
+                                <col valign="top" width="50%">
+                                <col valign="top" width="50%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td colspan="3" align="left" class="scListControlHead">
+                                        <div>
+                                            Field Name
+                                            <div></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="/sitecore/shell/themes/standard/images/bullet_square_green.png" width="16" height="16" align="middle" class="" alt="" border="0"></td>
+                                    <td class="scValidatorTitle">
+                                        <input type="text" value="Lorem ipsum dolor sit amet" />
+                                        <input name="field1" id="radio1" type="radio" />
+                                        <label for="radio1"><span>Use This Version</span></label>
+                                    </td>
+                                    <td class="scValidatorResult">
+                                        <input type="text" value="Lorem ipsum dolor sit amett, consectetur adipiscing elit" />
+                                        <input name="field1" id="radio2" type="radio" />
+                                        <label for="radio2"><span>Use This Version</span></label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" align="left" class="scListControlHead">
+                                        <div>
+                                            Field Name
+                                            <div></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="/sitecore/shell/themes/standard/images/bullet_square_green.png" width="16" height="16" align="middle" class="" alt="" border="0"></td>
+                                    <td class="scValidatorTitle">
+                                        <textarea></textarea>
+                                        <input name="field2" id="radio3" type="radio" />
+                                        <label for="radio3"><span>Use This Version</span></label>
+                                    </td>
+                                    <td class="scValidatorResult">
+                                        <textarea></textarea>
+                                        <input name="field2" id="radio4" type="radio" />
+                                        <label for="radio4"><span>Use This Version</span></label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" align="left" class="scListControlHead">
+                                        <div>
+                                            Field Name
+                                            <div></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="/sitecore/shell/themes/standard/images/bullet_square_red.png" width="16" height="16" align="middle" class="" alt="" border="0"></td>
+                                    <td class="scValidatorTitle">
+                                        <div style=""><input id="FIELD7330843" class="scContentControlImage" value="/Images/IsacaDP/Project/ISACA/Conferences/Heroes/CertBackground" onfocus="javascript:return scContent.activate(this,event,'sitecore://master/{46466C58-7A01-44FF-971C-5772C77C0663}?lang=en&amp;ver=1&amp;fld={567C6068-9D47-47FF-AB7B-D463F86ADBF3}&amp;ctl=FIELD7330843')" onblur="javascript:return scContent.deactivate(this,event,'sitecore://master/{46466C58-7A01-44FF-971C-5772C77C0663}?lang=en&amp;ver=1&amp;fld={567C6068-9D47-47FF-AB7B-D463F86ADBF3}&amp;ctl=FIELD7330843')" placeholder="" onchange="javascript:return scForm.postEvent(this,event)"><div id="FIELD7330843_pane" class="scContentControlImagePane"><div class="scContentControlImageImage" onclick="javascript:return scForm.postEvent(this,event,'FIELD7330843.Browse')"><iframe id="FIELD7330843_image" src="-/media/55086cc2f098402a946517f75f010461.ashx?bc=white&amp;db=master&amp;h=128&amp;la=en&amp;mw=640&amp;thn=1&amp;ts=d3fffaec-e33a-427e-9626-95863e8a1620&amp;udi=1" alt="" frameborder="0" marginwidth="0" marginheight="0" width="100%" height="128" allowtransparency="allowtransparency"></iframe></div><div id="FIELD7330843_details" class="scContentControlImageDetails"><div>Dimensions: 1312 x 500</div><div style="padding:2px 0px 0px 0px">Warning: Alternate Text is missing.</div></div></div></div>
+                                        <input name="field3" id="radio5" type="radio" />
+                                        <label for="radio5"><span>Use This Version</span></label>
+                                    </td>
+                                    <td class="scValidatorResult">
+                                        <div style=""><input id="FIELD7330843" class="scContentControlImage" value="/Images/IsacaDP/Project/ISACA/Conferences/Heroes/CertBackground" onfocus="javascript:return scContent.activate(this,event,'sitecore://master/{46466C58-7A01-44FF-971C-5772C77C0663}?lang=en&amp;ver=1&amp;fld={567C6068-9D47-47FF-AB7B-D463F86ADBF3}&amp;ctl=FIELD7330843')" onblur="javascript:return scContent.deactivate(this,event,'sitecore://master/{46466C58-7A01-44FF-971C-5772C77C0663}?lang=en&amp;ver=1&amp;fld={567C6068-9D47-47FF-AB7B-D463F86ADBF3}&amp;ctl=FIELD7330843')" placeholder="" onchange="javascript:return scForm.postEvent(this,event)"><div id="FIELD7330843_pane" class="scContentControlImagePane"><div class="scContentControlImageImage" onclick="javascript:return scForm.postEvent(this,event,'FIELD7330843.Browse')"><iframe id="FIELD7330843_image" src="-/media/55086cc2f098402a946517f75f010461.ashx?bc=white&amp;db=master&amp;h=128&amp;la=en&amp;mw=640&amp;thn=1&amp;ts=d3fffaec-e33a-427e-9626-95863e8a1620&amp;udi=1" alt="" frameborder="0" marginwidth="0" marginheight="0" width="100%" height="128" allowtransparency="allowtransparency"></iframe></div><div id="FIELD7330843_details" class="scContentControlImageDetails"><div>Dimensions: 1312 x 500</div><div style="padding:2px 0px 0px 0px">Warning: Alternate Text is missing.</div></div></div></div>
+                                        <input name="field3" id="radio6" type="radio" />
+                                        <label for="radio6"><span>Use This Version</span></label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" align="left" class="scListControlHead">
+                                        <div>
+                                            Field Name
+                                            <div></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="/sitecore/shell/themes/standard/images/bullet_square_yellow.png" width="16" height="16" align="middle" class="" alt="" border="0"></td>
+                                    <td class="scValidatorTitle">
+                                        <table id="FIELD7330846" class="scContentControlMultilist" onfocus="javascript:return scContent.activate(this,event,'sitecore://master/{46466C58-7A01-44FF-971C-5772C77C0663}?lang=en&amp;ver=1&amp;fld={3FC867BB-74F1-42A0-90AE-8F6D0616D8DC}&amp;ctl=FIELD7330846')" onblur="javascript:return scContent.deactivate(this,event,'sitecore://master/{46466C58-7A01-44FF-971C-5772C77C0663}?lang=en&amp;ver=1&amp;fld={3FC867BB-74F1-42A0-90AE-8F6D0616D8DC}&amp;ctl=FIELD7330846')"><tbody><tr><td class="scContentControlMultilistCaption" width="50%">Selected</td><td width="20"><img src="/sitecore/images/blank.gif" width="20" height="1" class="scSpacer" alt="" border="0"></td></tr><tr><td valign="top" height="100%"><select id="FIELD7330846_selected" class="scContentControlMultilistBox" multiple="multiple" size="10" ondblclick="javascript:scContent.multilistMoveLeft('FIELD7330846')" onchange="javascript:document.getElementById('FIELD7330846_selected_help').innerHTML=this.selectedIndex>=0?this.options[this.selectedIndex].innerHTML:''"><option value="{2CAF8B7B-5FD0-4EBE-9902-EFEE908F4933}">Audit-Assurance</option><option value="{2CAF8B7B-5FD0-4EBE-9902-EFEE908F4933}">Audit-Assurance</option><option value="{2CAF8B7B-5FD0-4EBE-9902-EFEE908F4933}">Audit-Assurance</option><option value="{2CAF8B7B-5FD0-4EBE-9902-EFEE908F4933}">Audit-Assurance</option><option value="{2CAF8B7B-5FD0-4EBE-9902-EFEE908F4933}">Audit-Assurance</option></select></td><td valign="top"><img src="/temp/iconcache/office/16x16/navigate_up.png" width="16" height="16" class="scNavButton" style="margin:2px" alt="" border="0" onclick="javascript:scContent.multilistMoveUp('FIELD7330846')"><br><img src="/temp/iconcache/office/16x16/navigate_down.png" width="16" height="16" class="scNavButton" style="margin:2px" alt="" border="0" onclick="javascript:scContent.multilistMoveDown('FIELD7330846')"></td></tr><tr><td valign="top"><div class="scContentControlMultilistHelp" id="FIELD7330846_all_help"></div></td><td></td></tr></tbody></table>
+                                        <input name="field4" id="radio7" type="radio" />
+                                        <label for="radio7"><span>Use This Version</span></label>
+                                    </td>
+                                    <td class="scValidatorResult">
+                                        <table id="FIELD7330846" class="scContentControlMultilist" onfocus="javascript:return scContent.activate(this,event,'sitecore://master/{46466C58-7A01-44FF-971C-5772C77C0663}?lang=en&amp;ver=1&amp;fld={3FC867BB-74F1-42A0-90AE-8F6D0616D8DC}&amp;ctl=FIELD7330846')" onblur="javascript:return scContent.deactivate(this,event,'sitecore://master/{46466C58-7A01-44FF-971C-5772C77C0663}?lang=en&amp;ver=1&amp;fld={3FC867BB-74F1-42A0-90AE-8F6D0616D8DC}&amp;ctl=FIELD7330846')"><tbody><tr><td class="scContentControlMultilistCaption" width="50%">Selected</td><td width="20"><img src="/sitecore/images/blank.gif" width="20" height="1" class="scSpacer" alt="" border="0"></td></tr><tr><td valign="top" height="100%"><select id="FIELD7330846_selected" class="scContentControlMultilistBox" multiple="multiple" size="10" ondblclick="javascript:scContent.multilistMoveLeft('FIELD7330846')" onchange="javascript:document.getElementById('FIELD7330846_selected_help').innerHTML=this.selectedIndex>=0?this.options[this.selectedIndex].innerHTML:''"><option value="{2CAF8B7B-5FD0-4EBE-9902-EFEE908F4933}">Audit-Assurance</option><option value="{2CAF8B7B-5FD0-4EBE-9902-EFEE908F4933}">Audit-Assurance</option><option value="{2CAF8B7B-5FD0-4EBE-9902-EFEE908F4933}">Audit-Assurance</option><option value="{2CAF8B7B-5FD0-4EBE-9902-EFEE908F4933}">Audit-Assurance</option><option value="{2CAF8B7B-5FD0-4EBE-9902-EFEE908F4933}">Audit-Assurance</option></select></td><td valign="top"><img src="/temp/iconcache/office/16x16/navigate_up.png" width="16" height="16" class="scNavButton" style="margin:2px" alt="" border="0" onclick="javascript:scContent.multilistMoveUp('FIELD7330846')"><br><img src="/temp/iconcache/office/16x16/navigate_down.png" width="16" height="16" class="scNavButton" style="margin:2px" alt="" border="0" onclick="javascript:scContent.multilistMoveDown('FIELD7330846')"></td></tr><tr><td valign="top"><div class="scContentControlMultilistHelp" id="FIELD7330846_all_help"></div></td><td></td></tr></tbody></table>
+                                        <input name="field4" id="radio8" type="radio" />
+                                        <label for="radio8"><span>Use This Version</span></label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" align="left" class="scListControlHead">
+                                        <div>
+                                            Item in Context
+                                            <div></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="context-row">
+                                    <td colspan="3">
+                                        <ul>
+                                            <li>View in <a href="#" target="_blank">/sitecore/content/Home/Item Name</a></li>
+                                            <li>View in <a href="#" target="_blank">/sitecore/content/Home/Item Name</a></li>
+                                            <li>View in <a href="#" target="_blank">/sitecore/content/Home/Item Name</a></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="scFormDialogFooter">
+                <div class="footerOkCancel">
+                    <button id="OK" class="scButton scButtonPrimary" tabindex="0" onclick="javascript:return scForm.postEvent(this,event)" onkeydown="javascript:scForm.handleKey(this, event, null, '32')">Update and unlock item</button>
+                    <button id="Close" class="scButton" tabindex="0" style="margin:0px 0px 0px 4px;" onclick="javascript:return scForm.postEvent(this,event,'Close_Click')" onkeydown="javascript:scForm.handleKey(this, event, 'Close_Click', '32')">Cancel</button>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var scCSRFToken = {
+                key: '__CSRFTOKEN',
+                value: '/wEFJDUwMDE4NDRhLTczNzEtNDlmYi05ODRlLTZhMDYwOWExMGMxOA=='
+            };
+        </script>
+    </form>
+</body>
+
+</html>
