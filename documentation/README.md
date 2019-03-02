@@ -64,13 +64,13 @@ Remember you are using Markdown, you can provide code samples too:
 
 ## Usage
 
-![Screenshot of Notification Bar -- REPLACE IMAGE](images/hackathon.png?raw=true "Hackathon Logo")
+![Screenshot of Notification Bar](images/notification-lock.png?raw=true "Notification Lock")
 
 If the 'Review Changes and Unlock' link in the yellow notification bar is clicked a Lock Summary modal is displayed that looks and feels like the Sitecore Validation Summary which should be familiar to most authors. 
 Each row in the modal represents a field on the item that was edited, with the old value on the left and the new value on the right. 
 The author then selects via radio buttons in either column which value to take when unlocking.
 
-![Screenshot of Lock Summary in modal -- REPLACE IMAGE](images/hackathon.png?raw=true "Hackathon Logo")
+![Screenshot of Lock Summary in modal](images/lock-summary-modal.png?raw=true "Lock Summary Modal")
 
 Also in the modal, below the field changes summary, will be a list of other Sitecore items that refer to the locked item in their Presentation Details. 
 Clicking on one of these links will open a new tab showing that associated item in Experience Editor mode if the associated item has a layout. 
