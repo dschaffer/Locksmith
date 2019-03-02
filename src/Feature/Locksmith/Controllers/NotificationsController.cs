@@ -1,9 +1,8 @@
-﻿using Sitecore.Data.Items;
-using Sitecore.Pipelines.GetPageEditorNotifications;
-using Sitecore.Security.AccessControl;
-using System.Collections.Generic;
-using Locksmith.Extensions;
+﻿using Locksmith.Extensions;
 using Locksmith.Models;
+using Sitecore.Data.Items;
+using Sitecore.Pipelines.GetPageEditorNotifications;
+using System.Collections.Generic;
 
 namespace Locksmith.Controllers
 {
@@ -27,7 +26,7 @@ namespace Locksmith.Controllers
             {
                 for (int i = 0; i < items.Count; i++)
                 {
-                    if (security.IsUnlockable(item))
+                    if (security.IsUnlockable(items[i]))
                     {
                         Account owner = accounts.Get(items[i].Locking.GetOwner());
 

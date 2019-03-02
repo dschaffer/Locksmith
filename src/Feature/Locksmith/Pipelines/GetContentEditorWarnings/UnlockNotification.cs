@@ -12,7 +12,7 @@ namespace Locksmith.Pipelines.GetContentEditorWarnings
         public void Process(GetContentEditorWarningsArgs arguments)
         {
             Assert.ArgumentNotNull(arguments, "arguments");
-            if (arguments.Item == null) return;
+            if (arguments.Item == null || Sitecore.Context.User.IsAdministrator) return;
 
             NotificationsController controller = new NotificationsController();
             List<Notification> notifications = notifications = controller.Get(arguments.Item, arguments.Item.HasPresentation());

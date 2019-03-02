@@ -1,4 +1,5 @@
 ﻿using Locksmith.Controllers;
+using log4net;
 using Sitecore.Data.Items;
 using Sitecore.Shell.Framework.Commands;
 using Sitecore.Web.UI.Sheer;
@@ -10,19 +11,28 @@ namespace Locksmith.Commands
     [Serializable]
     public class ReviewAndUnlock : Command
     {
+        private static readonly ILog Logger = LogManager.GetLogger("LocksmithLogger");
+
         public override CommandState QueryState(CommandContext context)
         {
             CommandState currentState = CommandState.Enabled;
             SecurityController security = new SecurityController();
+            Logger.Info("ReviewAndUnlock starting");
 
             if (!security.IsAuthorized())
+            {
+                Logger.Info("ReviewAndUnlock stopping - not authorized");
                 currentState = CommandState.Disabled;
+            }
             else if (context.Items.Length > 0)
             {
                 Item item = context.Items[0];
 
                 if (!security.IsUnlockable(item))
+                {
+                    Logger.Info("ReviewAndUnlock stopping - unlockable");
                     currentState = CommandState.Disabled;
+                }
             }
             else
                 currentState = base.QueryState(context);
@@ -34,6 +44,7 @@ namespace Locksmith.Commands
         {
             if (context.Items.Length > 0)
             {
+                Logger.Info("ReviewAndUnlock executing");
                 Item item = context.Items[0];
                 NameValueCollection parameters = new NameValueCollection();
                 parameters["id"] = item.ID.ToString();
@@ -46,6 +57,7 @@ namespace Locksmith.Commands
         protected void Run(ClientPipelineArgs args)
         {
             SecurityController security = new SecurityController();
+            Logger.Info("ReviewAndUnlock running");
 
             if (security.IsAuthorized())
             {

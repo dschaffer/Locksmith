@@ -10,7 +10,7 @@ namespace Locksmith.Pipelines.GetPageEditorNotifications
         public override void Process(GetPageEditorNotificationsArgs arguments)
         {
             Assert.ArgumentNotNull(arguments, "arguments");
-            if (arguments.ContextItem == null) return;
+            if (arguments.ContextItem == null || Sitecore.Context.User.IsAdministrator) return;
 
             NotificationsController controller = new NotificationsController();
             List<PageEditorNotification> notifications = controller.GetPageEditorNotifications(arguments.ContextItem);

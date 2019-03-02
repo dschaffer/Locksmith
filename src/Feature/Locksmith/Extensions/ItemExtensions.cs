@@ -124,12 +124,6 @@ namespace Locksmith.Extensions
             return i == null ? new RenderingReference[0] : i.Visualization.GetRenderings(Sitecore.Context.Device, false);
         }
 
-        public static string GetContentEditorUrl(this Item i)
-        {
-            var requestUri = HttpContext.Current.Request.Url;
-            return string.Format(Constants.ContentEditorUrlFormat, requestUri.Scheme, requestUri.Host, WebUtility.HtmlEncode(i.ID.ToString()), i.Version.Number, i.Language.CultureInfo.Name);
-        }
-
         public static bool HasPresentation(this Item item)
         {
             return item.Fields[Sitecore.FieldIDs.LayoutField] != null && !String.IsNullOrEmpty(item.Fields[Sitecore.FieldIDs.LayoutField].Value);

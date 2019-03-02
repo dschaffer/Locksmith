@@ -639,6 +639,7 @@
     <Compile Include="Controllers\SettingsController.cs" />
     <Compile Include="Controllers\NotificationsController.cs" />
     <Compile Include="Dbs.cs" />
+    <Compile Include="Events\SaveHistory.cs" />
     <Compile Include="Extensions\ItemExtensions.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Notification.cs" />
