@@ -8,9 +8,15 @@ Examples of things to include are the following.
 
 ## Summary
 
-**Category:** Hackathon Category
+**Category:** Best enhancement to the Sitecore Admin (XP) UI for Content Editors & Marketers
 
-What is the purpose of your module? What problem does it solve and how does it do that?
+In Sitecore environments that have multiple authors making changes to the same items authors are generally required to lock items before making edits to ensure there are no collisions between authors. One common downside with this approach is that authors need to remember to unlock their items once editing is complete, because if they don’t then no other users can lock and edit that item until the original editor or an admin logs in and unlocks it.
+
+Our module (codename Locksmith) gives editors the ability to review changes field by field or in page context via a modal in the Sitecore admin so items left locked by other users after a period of time can be safely unlocked by any other user. This functionality will be accessed via a yellow notification bar on the locked item which appears only if the item is locked and: 
+	- the lock owner has logged out or their session has expired
+	- the lock owner is not admin (can be extended to specific roles as well)
+	- the item is normally editable/lockable during the current workflow state
+	- the user normally has write access to the item
 
 ## Pre-requisites
 
@@ -50,19 +56,22 @@ Remember you are using Markdown, you can provide code samples too:
 
 ## Usage
 
-Provide documentation  about your module, how do the users use your module, where are things located, what do icons mean, are there any secret shortcuts etc.
+![Screenshot of Notification Bar -- REPLACE IMAGE](images/hackathon.png?raw=true "Hackathon Logo")
 
-Please include screenshots where necessary. You can add images to the `./images` folder and then link to them from your documentation:
+If the 'Review Changes and Unlock' link in the yellow notification bar is clicked a Lock Summary modal is displayed that looks and feels like the Sitecore Validation Summary which should be familiar to most authors. 
+Each row in the modal represents a field on the item that was edited, with the old value on the left and the new value on the right. 
+The author then selects via radio buttons in either column which value to take when unlocking.
 
-![Hackathon Logo](images/hackathon.png?raw=true "Hackathon Logo")
+![Screenshot of Lock Summary in modal -- REPLACE IMAGE](images/hackathon.png?raw=true "Hackathon Logo")
 
-You can embed images of different formats too:
+Also in the modal, below the field changes summary, will be a list of other Sitecore items that refer to the locked item in their Presentation Details. 
+Clicking on one of these links will open a new tab showing that associated item in Experience Editor mode if the associated item has a layout. 
+Old and new field values can also be reviewed and selected via the Experience Editor UI.
 
-![Deal With It](images/deal-with-it.gif?raw=true "Deal With It")
+When an editor’s review is complete and clicks "Update and unlock item" the item will be unlocked and saved with the selected field values. 
+The original lock owner will be notified via email that their item has been unlocked and see a summary of the changed field values.
 
-And you can embed external images too:
-
-![Random](https://placeimg.com/480/240/any "Random")
+![Screenshot of email sent to lock owner -- REPLACE IMAGE](images/hackathon.png?raw=true "Hackathon Logo")
 
 ## Video
 
