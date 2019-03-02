@@ -7,8 +7,8 @@
     <ProjectGuid>{C6D5B834-AF78-4968-A8A4-FFC24F7E5CC7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Unlock_Safely</RootNamespace>
-    <AssemblyName>Unlock Safely</AssemblyName>
+    <RootNamespace>Locksmith</RootNamespace>
+    <AssemblyName>Locksmith</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -631,23 +631,31 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RazorGeneratorMvcStart.cs" />
+    <Compile Include="Commands\ReviewAndUnlock.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\ContentController.cs" />
+    <Compile Include="Controllers\LocksmithController.cs" />
+    <Compile Include="Controllers\SecurityController.cs" />
+    <Compile Include="Controllers\SettingsController.cs" />
     <Compile Include="Controllers\NotificationsController.cs" />
+    <Compile Include="Dbs.cs" />
     <Compile Include="Extensions\ItemExtensions.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Notification.cs" />
+    <Compile Include="Models\UnlockRequest.cs" />
     <Compile Include="Pipelines\GetContentEditorWarnings\UnlockNotification.cs" />
     <Compile Include="Pipelines\GetPageEditorNotifications\UnlockNotification.cs" />
+    <Compile Include="Pipelines\Initialize\RegisterWebApiRoutes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="App_Config\Include\Feature\Feature.UnlockSafely.config" />
+    <None Include="App_Config\Include\Feature\Feature.Locksmith.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="sitecore modules\shell\Locksmith\modal.html" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\..\..\packages\RazorGenerator.MsBuild.2.4.7\build\RazorGenerator.MsBuild.targets" Condition="Exists('..\..\..\packages\RazorGenerator.MsBuild.2.4.7\build\RazorGenerator.MsBuild.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

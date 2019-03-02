@@ -10,7 +10,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 
-namespace Unlock_Safely.Extensions
+namespace Locksmith.Extensions
 {
     public static class ItemExtensions
     {

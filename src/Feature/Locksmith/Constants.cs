@@ -1,4 +1,4 @@
-﻿namespace Unlock_Safely
+﻿namespace Locksmith
 {
     public static class Constants
     {
@@ -7,6 +7,7 @@
         public const string DefaultCommandDisplayName = "Review Changes and Unlock";
         public const string DefaultUnlockDatasourceMessage = "Datasource ({0}) is locked by {1} but can be unlocked.";
         public const string DefaultUnlockItemMessage = "Item ({0}) is locked by {1} but can be unlocked.";
+        public const string SettingsId = "";
         public const string WarningIcon = "/sitecore/shell/themes/standard/Images/warning_yellow.png";
     }
 }

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Unlock_Safely.Models;
+using Locksmith.Models;
 
-namespace Unlock_Safely.Controllers
+namespace Locksmith.Controllers
 {
     public class AccountController
     {

@@ -1,9 +1,9 @@
 ﻿using Sitecore.Diagnostics;
 using Sitecore.Pipelines.GetPageEditorNotifications;
 using System.Collections.Generic;
-using Unlock_Safely.Controllers;
+using Locksmith.Controllers;
 
-namespace Unlock_Safely
+namespace Locksmith.Pipelines.GetPageEditorNotifications
 {
     public class UnlockNotification : GetPageEditorNotificationsProcessor
     {

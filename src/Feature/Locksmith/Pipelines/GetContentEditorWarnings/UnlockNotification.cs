@@ -1,11 +1,11 @@
 ﻿using Sitecore.Diagnostics;
 using Sitecore.Pipelines.GetContentEditorWarnings;
 using System.Collections.Generic;
-using Unlock_Safely.Controllers;
-using Unlock_Safely.Extensions;
-using Unlock_Safely.Models;
+using Locksmith.Controllers;
+using Locksmith.Extensions;
+using Locksmith.Models;
 
-namespace Unlock_Safely.Pipelines.GetContentEditorWarnings
+namespace Locksmith.Pipelines.GetContentEditorWarnings
 {
     public class UnlockNotification
     {

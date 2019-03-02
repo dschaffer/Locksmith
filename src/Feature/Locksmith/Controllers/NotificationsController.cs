@@ -2,20 +2,21 @@
 using Sitecore.Pipelines.GetPageEditorNotifications;
 using Sitecore.Security.AccessControl;
 using System.Collections.Generic;
-using Unlock_Safely.Extensions;
-using Unlock_Safely.Models;
+using Locksmith.Extensions;
+using Locksmith.Models;
 
-namespace Unlock_Safely.Controllers
+namespace Locksmith.Controllers
 {
     public class NotificationsController
     {
         public List<Notification> Get(Item item, bool checkDatasources = true)
         {
-            ContentController content = new ContentController();
+            SettingsController content = new SettingsController();
             string command = content.GetCommand();
             string commandDisplayName = content.GetCommandDisplayName();
             string message;
             AccountController accounts = new AccountController();
+            SecurityController security = new SecurityController();
             List<Notification> model = new List<Notification>();
             List<Item> items = new List<Item>() { item };
 
@@ -26,19 +27,16 @@ namespace Unlock_Safely.Controllers
             {
                 for (int i = 0; i < items.Count; i++)
                 {
-                    if (items[i].Locking.IsLocked())
+                    if (security.IsUnlockable(item))
                     {
                         Account owner = accounts.Get(items[i].Locking.GetOwner());
 
-                        if (owner.Valid && !owner.Admin && !owner.LoggedIn && AuthorizationManager.IsAllowed(items[i], AccessRight.ItemWrite, Sitecore.Context.User))
-                        {
-                            if (i == 0)
-                                message = content.GetUnlockItemMessage(owner.Name, items[i].DisplayName);
-                            else
-                                message = content.GetUnlockDatasourceMessage(owner.Name, items[i].DisplayName);
+                        if (i == 0)
+                            message = content.GetUnlockItemMessage(owner.Name, items[i].DisplayName);
+                        else
+                            message = content.GetUnlockDatasourceMessage(owner.Name, items[i].DisplayName);
 
-                            model.Add(new Notification(items[i], owner, message, command, commandDisplayName));
-                        }
+                        model.Add(new Notification(items[i], owner, message, command, commandDisplayName));
                     }
                 }
             }

@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace Unlock_Safely.Controllers
+namespace Locksmith.Controllers
 {
-    public class ContentController
+    public class SettingsController
     {
         public string GetCommand()
         {
@@ -22,6 +18,15 @@ namespace Unlock_Safely.Controllers
             string model = Constants.DefaultCommandDisplayName;
 
             // look in sitecore for text value
+
+            return model;
+        }
+
+        public List<string> GetValidWorkflowStates()
+        {
+            List<string> model = new List<string>();
+
+
 
             return model;
         }
