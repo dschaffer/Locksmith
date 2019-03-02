@@ -83,4 +83,4 @@ The original lock owner will be notified via email that their item has been unlo
 
 ## Video
 
-[![Sitecore Hackathon Video Embedding Alt Text](https://img.youtube.com/vi/H1VFDUrPro8/0.jpg)](https://www.youtube.com/watch?v=H1VFDUrPro8)
+[![Sitecore Hackathon Video Embedding Alt Text](https://img.youtube.com/vi/H1VFDUrPro8/0.jpg?v=1)](https://www.youtube.com/watch?v=H1VFDUrPro8)
