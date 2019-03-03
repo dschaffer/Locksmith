@@ -1,6 +1,6 @@
 ![Hackathon Logo](documentation/images/hackathon.png?raw=true "Hackathon Logo")
 
-# Pwnd the Experience Submission
+# Submission Boilerplate
 
 Welcome to Sitecore Hackathon 2019.
 
@@ -37,4 +37,3 @@ All teams are required to submit the following as part of their entry submission
   - How did you solve it
   - What is the end result
   
- # Doug was here
