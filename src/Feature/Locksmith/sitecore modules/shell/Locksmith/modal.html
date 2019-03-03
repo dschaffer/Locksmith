@@ -101,7 +101,7 @@
             <div class="scFlexContent">
                 <div class="scStretchAbsolute scDialogContentContainer">
                     <div id="LockSummary" class="scScrollbox scStretchAbsolute">
-                        <input type="hidden" name="Id" value="" />
+                        <input type="hidden" name="Id" id="IdInput" value="" />
                         <table class="scListControl" width="100%" cellpadding="0" border="0">
                             <colgroup>
                                 <col valign="top">
@@ -217,8 +217,8 @@
             </div>
             <div class="scFormDialogFooter">
                 <div class="footerOkCancel">
-                    <button id="OK" class="scButton scButtonPrimary" tabindex="0" onclick="javascript:return scForm.postEvent(this,event)" onkeydown="javascript:scForm.handleKey(this, event, null, '32')">Update and unlock item</button>
-                    <button id="Close" class="scButton" tabindex="0" style="margin:0px 0px 0px 4px;" onclick="javascript:return scForm.postEvent(this,event,'Close_Click')" onkeydown="javascript:scForm.handleKey(this, event, 'Close_Click', '32')">Cancel</button>
+                    <button id="OK" class="scButton scButtonPrimary" tabindex="0" type="submit">Update and unlock item</button>
+                    <button id="Close" class="scButton" tabindex="0" style="margin:0px 0px 0px 4px;" onclick="window.top.dialogClose()">Cancel</button>
                 </div>
             </div>
         </div>
@@ -230,7 +230,9 @@
             var results = regex.exec(location.search);
             return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
         };
-        $('input[name="Id"]').val(getUrlParameter("id"););
+        $(document).ready(function () {
+            document.getElementById("IdInput").value = getUrlParameter("id");
+        });
     </script>
 </body>
 </html>

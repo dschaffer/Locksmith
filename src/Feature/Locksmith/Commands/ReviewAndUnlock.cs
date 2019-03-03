@@ -48,8 +48,6 @@ namespace Locksmith.Commands
                 Item item = context.Items[0];
                 NameValueCollection parameters = new NameValueCollection();
                 parameters["id"] = item.ID.ToString();
-                parameters["language"] = item.Language.ToString();
-                parameters["database"] = item.Database.Name;
                 Sitecore.Context.ClientPage.Start(this, "Run", parameters);
             }
         }
@@ -68,11 +66,9 @@ namespace Locksmith.Commands
                 }
                 else
                 {
-                    Sitecore.Text.UrlString popUpUrl = new Sitecore.Text.UrlString("/sitecore%20modules/shell/locksmith/modal.html");
+                    Sitecore.Text.UrlString popUpUrl = new Sitecore.Text.UrlString("/api/locksmith/modal");
                     popUpUrl.Append("id", args.Parameters["id"]);
-                    popUpUrl.Append("database", args.Parameters["database"]);
-                    popUpUrl.Append("language", args.Parameters["language"]);
-                    SheerResponse.ShowModalDialog(popUpUrl.ToString(), "600", "450");
+                    SheerResponse.ShowModalDialog(popUpUrl.ToString(), "700", "550");
                     args.WaitForPostBack();
                 }
             }

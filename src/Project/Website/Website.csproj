@@ -119,6 +119,7 @@
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\sitecore91-481250-single - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\sitecore91-481250-single - Web Deploy.pubxml" />
+    <Content Include="Views\Modal.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

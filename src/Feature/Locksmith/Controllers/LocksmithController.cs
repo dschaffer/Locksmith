@@ -6,6 +6,25 @@ namespace Locksmith.Controllers
 {
     public class LocksmithController : Controller
     {
+        public ActionResult Modal(string Id)
+        {
+            SecurityController security = new SecurityController();
+
+            if (!string.IsNullOrEmpty(Id) && security.IsAuthorized())
+            {
+                Item item = Dbs.Db.GetItem(Id);
+
+                if (item != null && security.IsUnlockable(item))
+                {
+                    UnlockResponse response = new UnlockResponse();
+                    response.Id = item.ID.ToString();
+                    return View("/~/Views/Modal.cshtml", response);
+                }
+            }
+
+            return new EmptyResult();
+        }
+
         [HttpPost]
         public JsonResult SaveAndUnlock(UnlockRequest model)
         {
